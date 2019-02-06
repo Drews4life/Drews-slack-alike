@@ -1,5 +1,5 @@
 //
-//  ChannelViewController.swift
+//  CreateAccountViewController.swift
 //  SlackAliker
 //
 //  Created by Andrii Zakharenkov on 2/6/19.
@@ -8,22 +8,16 @@
 
 import UIKit
 
-class ChannelViewController: UIViewController {
+class CreateAccountViewController: UIViewController {
 
-    @IBOutlet weak var loginBtn: UIButton!
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.revealViewController().rearViewRevealWidth = self.view.frame.size.width * 0.85;
-        
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func loginBtnClick(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: self)
+    @IBAction func dismissAllClick(_ sender: Any) {
+        performSegue(withIdentifier: UNWIND, sender: self)
     }
     
     /*

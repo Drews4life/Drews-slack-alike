@@ -18,6 +18,7 @@
 		669B3A19220B2DE8002F419A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A18220B2DE8002F419A /* GradientView.swift */; };
 		669B3A1C220B3A4B002F419A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A1B220B3A4B002F419A /* Constants.swift */; };
 		669B3A1E220B42B6002F419A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A1D220B42B6002F419A /* LoginViewController.swift */; };
+		669B3A21220B58DC002F419A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A20220B58DC002F419A /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		669B3A18220B2DE8002F419A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		669B3A1B220B3A4B002F419A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		669B3A1D220B42B6002F419A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		669B3A20220B58DC002F419A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		6C80AE17459DD9DFAAF91051 /* Pods_SlackAliker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlackAliker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		846217139F12A585BAC0F927 /* Pods-SlackAliker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackAliker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackAliker/Pods-SlackAliker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 				669B3A14220B24BB002F419A /* ChatViewController.swift */,
 				669B3A16220B24D7002F419A /* ChannelViewController.swift */,
 				669B3A1D220B42B6002F419A /* LoginViewController.swift */,
+				669B3A20220B58DC002F419A /* CreateAccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				669B39FB220AEEC2002F419A /* AppDelegate.swift in Sources */,
 				669B3A15220B24BB002F419A /* ChatViewController.swift in Sources */,
 				669B3A19220B2DE8002F419A /* GradientView.swift in Sources */,
+				669B3A21220B58DC002F419A /* CreateAccountViewController.swift in Sources */,
 				669B3A17220B24D7002F419A /* ChannelViewController.swift in Sources */,
 				669B3A10220B1E0A002F419A /* SWRevealViewController.m in Sources */,
 				669B3A1C220B3A4B002F419A /* Constants.swift in Sources */,
