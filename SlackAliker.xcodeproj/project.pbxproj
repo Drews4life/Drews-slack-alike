@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241639394439BB0415D7CC56 /* Pods_SlackAliker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C80AE17459DD9DFAAF91051 /* Pods_SlackAliker.framework */; };
 		669B39FB220AEEC2002F419A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B39FA220AEEC2002F419A /* AppDelegate.swift */; };
-		669B39FD220AEEC2002F419A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B39FC220AEEC2002F419A /* ViewController.swift */; };
 		669B3A00220AEEC2002F419A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669B39FE220AEEC2002F419A /* Main.storyboard */; };
 		669B3A02220AEEC4002F419A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669B3A01220AEEC4002F419A /* Assets.xcassets */; };
 		669B3A05220AEEC4002F419A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669B3A03220AEEC4002F419A /* LaunchScreen.storyboard */; };
+		669B3A10220B1E0A002F419A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A0E220B1E0A002F419A /* SWRevealViewController.m */; };
+		669B3A15220B24BB002F419A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A14220B24BB002F419A /* ChatViewController.swift */; };
+		669B3A17220B24D7002F419A /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A16220B24D7002F419A /* ChannelViewController.swift */; };
+		669B3A19220B2DE8002F419A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A18220B2DE8002F419A /* GradientView.swift */; };
+		669B3A1C220B3A4B002F419A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A1B220B3A4B002F419A /* Constants.swift */; };
+		669B3A1E220B42B6002F419A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A1D220B42B6002F419A /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1761FC977D2AD7BA5CC58CBA /* Pods-SlackAliker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackAliker.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackAliker/Pods-SlackAliker.release.xcconfig"; sourceTree = "<group>"; };
 		669B39F7220AEEC2002F419A /* SlackAliker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackAliker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669B39FA220AEEC2002F419A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		669B39FC220AEEC2002F419A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		669B39FF220AEEC2002F419A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		669B3A01220AEEC4002F419A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		669B3A04220AEEC4002F419A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		669B3A06220AEEC4002F419A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		669B3A0D220B1E09002F419A /* SlackAliker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlackAliker-Bridging-Header.h"; sourceTree = "<group>"; };
+		669B3A0E220B1E0A002F419A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		669B3A0F220B1E0A002F419A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		669B3A14220B24BB002F419A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		669B3A16220B24D7002F419A /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		669B3A18220B2DE8002F419A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		669B3A1B220B3A4B002F419A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		669B3A1D220B42B6002F419A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6C80AE17459DD9DFAAF91051 /* Pods_SlackAliker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlackAliker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		846217139F12A585BAC0F927 /* Pods-SlackAliker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackAliker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackAliker/Pods-SlackAliker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241639394439BB0415D7CC56 /* Pods_SlackAliker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DBE8006FF2DDC46FB17B3BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				846217139F12A585BAC0F927 /* Pods-SlackAliker.debug.xcconfig */,
+				1761FC977D2AD7BA5CC58CBA /* Pods-SlackAliker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4BBAAAECD56E2DC4359B1DE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C80AE17459DD9DFAAF91051 /* Pods_SlackAliker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		669B39EE220AEEC2002F419A = {
 			isa = PBXGroup;
 			children = (
 				669B39F9220AEEC2002F419A /* SlackAliker */,
 				669B39F8220AEEC2002F419A /* Products */,
+				3DBE8006FF2DDC46FB17B3BC /* Pods */,
+				4BBAAAECD56E2DC4359B1DE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +90,61 @@
 		669B39F9220AEEC2002F419A /* SlackAliker */ = {
 			isa = PBXGroup;
 			children = (
+				669B3A13220B2483002F419A /* Models */,
+				669B3A12220B247E002F419A /* Views */,
+				669B3A11220B247A002F419A /* Controllers */,
+				669B3A1A220B3A3A002F419A /* Utils */,
+				669B3A0C220B1DD0002F419A /* Support Files */,
 				669B39FA220AEEC2002F419A /* AppDelegate.swift */,
-				669B39FC220AEEC2002F419A /* ViewController.swift */,
 				669B39FE220AEEC2002F419A /* Main.storyboard */,
 				669B3A01220AEEC4002F419A /* Assets.xcassets */,
 				669B3A03220AEEC4002F419A /* LaunchScreen.storyboard */,
 				669B3A06220AEEC4002F419A /* Info.plist */,
 			);
 			path = SlackAliker;
+			sourceTree = "<group>";
+		};
+		669B3A0C220B1DD0002F419A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				669B3A0F220B1E0A002F419A /* SWRevealViewController.h */,
+				669B3A0E220B1E0A002F419A /* SWRevealViewController.m */,
+				669B3A0D220B1E09002F419A /* SlackAliker-Bridging-Header.h */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		669B3A11220B247A002F419A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				669B3A14220B24BB002F419A /* ChatViewController.swift */,
+				669B3A16220B24D7002F419A /* ChannelViewController.swift */,
+				669B3A1D220B42B6002F419A /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		669B3A12220B247E002F419A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				669B3A18220B2DE8002F419A /* GradientView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		669B3A13220B2483002F419A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		669B3A1A220B3A3A002F419A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				669B3A1B220B3A4B002F419A /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 669B3A09220AEEC4002F419A /* Build configuration list for PBXNativeTarget "SlackAliker" */;
 			buildPhases = (
+				FFE2FD0603F302F6FB9DA47D /* [CP] Check Pods Manifest.lock */,
 				669B39F3220AEEC2002F419A /* Sources */,
 				669B39F4220AEEC2002F419A /* Frameworks */,
 				669B39F5220AEEC2002F419A /* Resources */,
+				69F878ED195C32B366418CD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +181,7 @@
 				TargetAttributes = {
 					669B39F6220AEEC2002F419A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,13 +216,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		69F878ED195C32B366418CD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SlackAliker/Pods-SlackAliker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SlackAliker/Pods-SlackAliker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFE2FD0603F302F6FB9DA47D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SlackAliker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		669B39F3220AEEC2002F419A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				669B39FD220AEEC2002F419A /* ViewController.swift in Sources */,
+				669B3A1E220B42B6002F419A /* LoginViewController.swift in Sources */,
 				669B39FB220AEEC2002F419A /* AppDelegate.swift in Sources */,
+				669B3A15220B24BB002F419A /* ChatViewController.swift in Sources */,
+				669B3A19220B2DE8002F419A /* GradientView.swift in Sources */,
+				669B3A17220B24D7002F419A /* ChannelViewController.swift in Sources */,
+				669B3A10220B1E0A002F419A /* SWRevealViewController.m in Sources */,
+				669B3A1C220B3A4B002F419A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +424,10 @@
 		};
 		669B3A0A220AEEC4002F419A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 846217139F12A585BAC0F927 /* Pods-SlackAliker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDQKPD95SL;
 				INFOPLIST_FILE = SlackAliker/Info.plist;
@@ -291,6 +437,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.drews.SlackAliker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlackAliker/Support Files/SlackAliker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,8 +446,10 @@
 		};
 		669B3A0B220AEEC4002F419A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1761FC977D2AD7BA5CC58CBA /* Pods-SlackAliker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDQKPD95SL;
 				INFOPLIST_FILE = SlackAliker/Info.plist;
@@ -309,6 +459,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.drews.SlackAliker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlackAliker/Support Files/SlackAliker-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
