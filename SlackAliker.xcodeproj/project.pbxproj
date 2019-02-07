@@ -10,6 +10,7 @@
 		241639394439BB0415D7CC56 /* Pods_SlackAliker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C80AE17459DD9DFAAF91051 /* Pods_SlackAliker.framework */; };
 		6606740F220C742C00D21B06 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606740E220C742C00D21B06 /* AuthService.swift */; };
 		66067411220C83BD00D21B06 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66067410220C83BD00D21B06 /* RoundedButton.swift */; };
+		66067413220CB3B000D21B06 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66067412220CB3B000D21B06 /* UserDataService.swift */; };
 		669B39FB220AEEC2002F419A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B39FA220AEEC2002F419A /* AppDelegate.swift */; };
 		669B3A00220AEEC2002F419A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669B39FE220AEEC2002F419A /* Main.storyboard */; };
 		669B3A02220AEEC4002F419A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669B3A01220AEEC4002F419A /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		1761FC977D2AD7BA5CC58CBA /* Pods-SlackAliker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackAliker.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackAliker/Pods-SlackAliker.release.xcconfig"; sourceTree = "<group>"; };
 		6606740E220C742C00D21B06 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		66067410220C83BD00D21B06 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		66067412220CB3B000D21B06 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		669B39F7220AEEC2002F419A /* SlackAliker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackAliker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669B39FA220AEEC2002F419A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669B39FF220AEEC2002F419A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				6606740E220C742C00D21B06 /* AuthService.swift */,
+				66067412220CB3B000D21B06 /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				669B3A1E220B42B6002F419A /* LoginViewController.swift in Sources */,
 				66067411220C83BD00D21B06 /* RoundedButton.swift in Sources */,
 				669B39FB220AEEC2002F419A /* AppDelegate.swift in Sources */,
+				66067413220CB3B000D21B06 /* UserDataService.swift in Sources */,
 				669B3A15220B24BB002F419A /* ChatViewController.swift in Sources */,
 				6606740F220C742C00D21B06 /* AuthService.swift in Sources */,
 				669B3A19220B2DE8002F419A /* GradientView.swift in Sources */,

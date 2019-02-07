@@ -24,6 +24,7 @@ let USER_EMAIL = "user_email"
 let BASE_URL = "https://drewschatter.herokuapp.com/v1/"
 let URL_ACCOUNT_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
+let URL_CREATE_USER = "\(BASE_URL)user/add"
 
 //HEADERS
 let HEADERS = [
