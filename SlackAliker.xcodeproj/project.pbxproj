@@ -11,6 +11,9 @@
 		6606740F220C742C00D21B06 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606740E220C742C00D21B06 /* AuthService.swift */; };
 		66067411220C83BD00D21B06 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66067410220C83BD00D21B06 /* RoundedButton.swift */; };
 		66067413220CB3B000D21B06 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66067412220CB3B000D21B06 /* UserDataService.swift */; };
+		66067415220CCECB00D21B06 /* AvatarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66067414220CCECB00D21B06 /* AvatarPickerViewController.swift */; };
+		66067417220CD11100D21B06 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66067416220CD11100D21B06 /* AvatarCell.swift */; };
+		6606E3F1220E0DA000093D94 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3F0220E0DA000093D94 /* CircleImage.swift */; };
 		669B39FB220AEEC2002F419A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B39FA220AEEC2002F419A /* AppDelegate.swift */; };
 		669B3A00220AEEC2002F419A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669B39FE220AEEC2002F419A /* Main.storyboard */; };
 		669B3A02220AEEC4002F419A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669B3A01220AEEC4002F419A /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 		6606740E220C742C00D21B06 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		66067410220C83BD00D21B06 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		66067412220CB3B000D21B06 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		66067414220CCECB00D21B06 /* AvatarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerViewController.swift; sourceTree = "<group>"; };
+		66067416220CD11100D21B06 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		6606E3F0220E0DA000093D94 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		669B39F7220AEEC2002F419A /* SlackAliker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackAliker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669B39FA220AEEC2002F419A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669B39FF220AEEC2002F419A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 				669B3A16220B24D7002F419A /* ChannelViewController.swift */,
 				669B3A1D220B42B6002F419A /* LoginViewController.swift */,
 				669B3A20220B58DC002F419A /* CreateAccountViewController.swift */,
+				66067414220CCECB00D21B06 /* AvatarPickerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -148,6 +155,8 @@
 			children = (
 				669B3A18220B2DE8002F419A /* GradientView.swift */,
 				66067410220C83BD00D21B06 /* RoundedButton.swift */,
+				66067416220CD11100D21B06 /* AvatarCell.swift */,
+				6606E3F0220E0DA000093D94 /* CircleImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,11 +306,14 @@
 				669B3A1E220B42B6002F419A /* LoginViewController.swift in Sources */,
 				66067411220C83BD00D21B06 /* RoundedButton.swift in Sources */,
 				669B39FB220AEEC2002F419A /* AppDelegate.swift in Sources */,
+				6606E3F1220E0DA000093D94 /* CircleImage.swift in Sources */,
 				66067413220CB3B000D21B06 /* UserDataService.swift in Sources */,
 				669B3A15220B24BB002F419A /* ChatViewController.swift in Sources */,
 				6606740F220C742C00D21B06 /* AuthService.swift in Sources */,
+				66067415220CCECB00D21B06 /* AvatarPickerViewController.swift in Sources */,
 				669B3A19220B2DE8002F419A /* GradientView.swift in Sources */,
 				669B3A21220B58DC002F419A /* CreateAccountViewController.swift in Sources */,
+				66067417220CD11100D21B06 /* AvatarCell.swift in Sources */,
 				669B3A17220B24D7002F419A /* ChannelViewController.swift in Sources */,
 				669B3A10220B1E0A002F419A /* SWRevealViewController.m in Sources */,
 				669B3A1C220B3A4B002F419A /* Constants.swift in Sources */,
