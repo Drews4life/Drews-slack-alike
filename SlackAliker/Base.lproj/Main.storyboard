@@ -53,7 +53,7 @@
                                 <rect key="frame" x="273" y="106.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="aiY-DK-Fpv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="aiY-DK-Fpv" customClass="CircleImage" customModule="SlackAliker" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="2Yk-Kq-o4o"/>
@@ -119,6 +119,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="maN-o4-onl" id="3Qw-8f-ADI"/>
+                        <outlet property="userImg" destination="aiY-DK-Fpv" id="mnd-LW-tq2"/>
                         <segue destination="eXg-rO-424" kind="show" identifier="toLogin" id="YUu-lt-C8h"/>
                     </connections>
                 </viewController>

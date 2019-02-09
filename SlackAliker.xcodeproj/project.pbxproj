@@ -25,6 +25,8 @@
 		669B3A1C220B3A4B002F419A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A1B220B3A4B002F419A /* Constants.swift */; };
 		669B3A1E220B42B6002F419A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A1D220B42B6002F419A /* LoginViewController.swift */; };
 		669B3A21220B58DC002F419A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B3A20220B58DC002F419A /* CreateAccountViewController.swift */; };
+		66C32E6A220F72EB0093EBAA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C32E68220F72EB0093EBAA /* ProfileViewController.swift */; };
+		66C32E6B220F72EB0093EBAA /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C32E69220F72EB0093EBAA /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		669B3A1B220B3A4B002F419A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		669B3A1D220B42B6002F419A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		669B3A20220B58DC002F419A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		66C32E68220F72EB0093EBAA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		66C32E69220F72EB0093EBAA /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		6C80AE17459DD9DFAAF91051 /* Pods_SlackAliker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlackAliker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		846217139F12A585BAC0F927 /* Pods-SlackAliker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackAliker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackAliker/Pods-SlackAliker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +117,7 @@
 		669B39F9220AEEC2002F419A /* SlackAliker */ = {
 			isa = PBXGroup;
 			children = (
+				66C32E6C220F73110093EBAA /* XIBs */,
 				6606740D220C741300D21B06 /* Services */,
 				669B3A13220B2483002F419A /* Models */,
 				669B3A12220B247E002F419A /* Views */,
@@ -146,6 +151,7 @@
 				669B3A1D220B42B6002F419A /* LoginViewController.swift */,
 				669B3A20220B58DC002F419A /* CreateAccountViewController.swift */,
 				66067414220CCECB00D21B06 /* AvatarPickerViewController.swift */,
+				66C32E68220F72EB0093EBAA /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,6 +180,14 @@
 				669B3A1B220B3A4B002F419A /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		66C32E6C220F73110093EBAA /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				66C32E69220F72EB0093EBAA /* ProfileViewController.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +253,7 @@
 			files = (
 				669B3A05220AEEC4002F419A /* LaunchScreen.storyboard in Resources */,
 				669B3A02220AEEC4002F419A /* Assets.xcassets in Resources */,
+				66C32E6B220F72EB0093EBAA /* ProfileViewController.xib in Resources */,
 				669B3A00220AEEC2002F419A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +330,7 @@
 				669B3A21220B58DC002F419A /* CreateAccountViewController.swift in Sources */,
 				66067417220CD11100D21B06 /* AvatarCell.swift in Sources */,
 				669B3A17220B24D7002F419A /* ChannelViewController.swift in Sources */,
+				66C32E6A220F72EB0093EBAA /* ProfileViewController.swift in Sources */,
 				669B3A10220B1E0A002F419A /* SWRevealViewController.m in Sources */,
 				669B3A1C220B3A4B002F419A /* Constants.swift in Sources */,
 			);
