@@ -24,6 +24,7 @@ class CreateAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,15 +68,17 @@ class CreateAccountViewController: UIViewController {
                             if success {
                                 NotificationCenter.default.post(name: NOTIFICATION_USER_DATA_DID_CHANGE, object: nil)
                                 self.performSegue(withIdentifier: UNWIND, sender: self)
-                            }
+                            } 
                         })
                         
                     } else {
+                      
                         self.activitySpinner.isHidden = true;
                         self.activitySpinner.stopAnimating()
                     }
                 })
             } else {
+               
                 self.activitySpinner.isHidden = true;
                 self.activitySpinner.stopAnimating()
             }

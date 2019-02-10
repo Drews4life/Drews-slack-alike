@@ -77,6 +77,7 @@ class AuthService {
             "password": password
         ]
         
+        
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON { (response) in
             if response.result.error == nil {
 //
@@ -92,14 +93,14 @@ class AuthService {
                 guard let data = response.data else { return }
                 let json = JSON(data: data)
                 
-                self.userEmail = json["email"].stringValue;
+                self.userEmail = json["user"].stringValue;
                 self.authToken = json["token"].stringValue;
                 self.isUserLoggedIn = true;
                 
                 completion(true)
             } else {
                 completion(false)
-                debugPrint(response.result.error as Any)
+                
             }
         }
     }
@@ -113,32 +114,48 @@ class AuthService {
             "avatarName": avatarName,
             "avatarColor": avatarColor
         ]
+       
         
-        let customHeaders = [
-            "Content-Type": "application/json; charset=utf-8",
-            "Authorization": "Bearer \(self.authToken)"
-        ]
-        
-        Alamofire.request(URL_CREATE_USER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: customHeaders).responseJSON { (response) in
+        Alamofire.request(URL_CREATE_USER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
-                
                 guard let data = response.data else { return }
-                let json = JSON(data: data)
                 
-                let id = json["_id"].stringValue
-                let color = json["avatarColor"].stringValue;
-                let avatarName = json["avatarName"].stringValue;
-                let email = json["email"].stringValue;
-                let name = json["name"].stringValue;
-                
-                UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+                self.setUserData(data: data)
                 completion(true)
             } else {
                 completion(false)
-                debugPrint(response.result.error as Any)
+                
             }
             
         }
+    }
+    
+    func getUserDataByEmail(completion: @escaping CompletionHandler) {
+       
+        Alamofire.request("\(URL_GET_USER_BY_EMAIL)\(self.userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                guard let data = response.data else { return }
+                
+                self.setUserData(data: data)
+                completion(true)
+            } else {
+                
+                completion(false)
+            }
+        }
+    }
+    
+    func setUserData(data: Data) {
+        let json = JSON(data: data)
+        
+        let id = json["_id"].stringValue
+        let color = json["avatarColor"].stringValue;
+        let avatarName = json["avatarName"].stringValue;
+        let email = json["email"].stringValue;
+        let name = json["name"].stringValue;
+        
+        UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
     }
 }

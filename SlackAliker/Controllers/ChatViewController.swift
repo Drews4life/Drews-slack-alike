@@ -11,23 +11,57 @@ import UIKit
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var burgerButton: UIButton!
+    @IBOutlet weak var channelNameLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         burgerButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.userDataDidChange), name: NOTIFICATION_USER_DATA_DID_CHANGE, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.onChannelSelected), name: NOTIFICATION_CHANNEL_SELECTED, object: nil)
+        
+        getInitialUserData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func getInitialUserData() {
+        if AuthService.instance.isUserLoggedIn {
+            AuthService.instance.getUserDataByEmail { (success) in
+                if success {
+                    NotificationCenter.default.post(name: NOTIFICATION_USER_DATA_DID_CHANGE, object: nil)
+                }
+            }
+        } else {
+            channelNameLbl.text = "Please Log In"
+        }
     }
-    */
-
+    
+    @objc func userDataDidChange() {
+        if AuthService.instance.isUserLoggedIn {
+            getMessagesAfterLogin()
+        } else {
+            channelNameLbl.text = "Please Log In"
+        }
+    }
+    
+    @objc func onChannelSelected() {
+        updateWithChannel()
+    }
+    
+    func updateWithChannel() {
+        let channelName = MessagesService.instance.selectedChannel!.channelTitle ?? "Chat"
+        channelNameLbl.text = "#\(channelName)"
+    }
+    
+    func getMessagesAfterLogin() {
+        MessagesService.instance.findAllChannels { (success) in
+            if success {
+                //change
+            }
+        }
+    }
+    
+    
 }

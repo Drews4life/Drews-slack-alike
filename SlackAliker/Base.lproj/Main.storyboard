@@ -52,6 +52,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQf-pc-v57">
                                 <rect key="frame" x="273" y="106.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelClick:" destination="PS4-mj-nqC" eventType="touchUpInside" id="G9G-P2-8Nn"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="aiY-DK-Fpv" customClass="CircleImage" customModule="SlackAliker" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
@@ -64,7 +67,7 @@
                                 <rect key="frame" x="0.0" y="148.5" width="375" height="403.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UK8-xH-mjq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="UK8-xH-mjq" customClass="ChannelCell" customModule="SlackAliker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UK8-xH-mjq" id="8Tq-9l-avG">
@@ -84,6 +87,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="xnJ-uv-phb" id="NhA-Po-P6H"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -119,6 +125,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="maN-o4-onl" id="3Qw-8f-ADI"/>
+                        <outlet property="tableView" destination="deJ-Pt-cxw" id="Ure-nt-E7u"/>
                         <outlet property="userImg" destination="aiY-DK-Fpv" id="mnd-LW-tq2"/>
                         <segue destination="eXg-rO-424" kind="show" identifier="toLogin" id="YUu-lt-C8h"/>
                     </connections>
@@ -227,10 +234,18 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onLoginClick:" destination="eXg-rO-424" eventType="touchUpInside" id="nvY-76-VWc"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CVF-GE-Va8">
+                                <rect key="frame" x="177.5" y="382" width="20" height="20"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="CVF-GE-Va8" firstAttribute="top" secondItem="2S0-lm-64d" secondAttribute="bottom" constant="8" id="10N-5Y-5kA"/>
                             <constraint firstItem="2S0-lm-64d" firstAttribute="top" secondItem="9fq-xz-hJg" secondAttribute="bottom" id="8t5-so-Mfg"/>
                             <constraint firstItem="fxG-vp-DXM" firstAttribute="top" secondItem="4kj-R1-P6N" secondAttribute="top" constant="16" id="Jfp-2v-RTm"/>
                             <constraint firstItem="2QD-Q9-t9g" firstAttribute="centerX" secondItem="I0w-F0-FoR" secondAttribute="centerX" id="Kp0-EY-A5j"/>
@@ -238,6 +253,7 @@
                             <constraint firstItem="9fq-xz-hJg" firstAttribute="top" secondItem="skM-I3-IIT" secondAttribute="bottom" constant="40" id="RjZ-ZA-G4G"/>
                             <constraint firstItem="9fq-xz-hJg" firstAttribute="centerX" secondItem="I0w-F0-FoR" secondAttribute="centerX" id="ceh-96-iFH"/>
                             <constraint firstItem="4kj-R1-P6N" firstAttribute="trailing" secondItem="fxG-vp-DXM" secondAttribute="trailing" constant="16" id="dRw-Yb-osX"/>
+                            <constraint firstItem="CVF-GE-Va8" firstAttribute="centerX" secondItem="I0w-F0-FoR" secondAttribute="centerX" id="kXo-Qm-gPL"/>
                             <constraint firstItem="skM-I3-IIT" firstAttribute="centerX" secondItem="I0w-F0-FoR" secondAttribute="centerX" id="nWm-b9-uDM"/>
                             <constraint firstItem="2S0-lm-64d" firstAttribute="centerX" secondItem="I0w-F0-FoR" secondAttribute="centerX" id="t0Y-1k-beH"/>
                             <constraint firstItem="2QD-Q9-t9g" firstAttribute="top" secondItem="4kj-R1-P6N" secondAttribute="top" constant="60" id="txk-VE-5jX"/>
@@ -245,6 +261,9 @@
                         <viewLayoutGuide key="safeArea" id="4kj-R1-P6N"/>
                     </view>
                     <connections>
+                        <outlet property="emailInput" destination="PHt-Gq-uYo" id="xfR-cx-FDh"/>
+                        <outlet property="loadingIndicator" destination="CVF-GE-Va8" id="91t-4t-vpV"/>
+                        <outlet property="passwordInput" destination="vwb-9Z-imx" id="j88-Hb-730"/>
                         <segue destination="JP2-Io-lPj" kind="show" identifier="toCreateAccount" id="emb-mD-Kxs"/>
                     </connections>
                 </viewController>
@@ -385,7 +404,7 @@
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CSm-Xg-2EM">
                                 <rect key="frame" x="177.5" y="491" width="20" height="20"/>
-                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -534,9 +553,9 @@
                                         </constraints>
                                         <state key="normal" image="smackBurger"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat with George" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeP-zB-wkN">
-                                        <rect key="frame" x="119" y="43.5" width="137.5" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeP-zB-wkN">
+                                        <rect key="frame" x="166" y="41.5" width="43" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                         <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -561,6 +580,7 @@
                     </view>
                     <connections>
                         <outlet property="burgerButton" destination="5Uf-XV-dVV" id="erC-Bc-o4E"/>
+                        <outlet property="channelNameLbl" destination="yeP-zB-wkN" id="gq0-sT-Q62"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6w-Zb-g6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
