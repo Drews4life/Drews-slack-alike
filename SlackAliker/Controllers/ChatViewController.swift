@@ -12,10 +12,15 @@ class ChatViewController: UIViewController {
 
     @IBOutlet weak var burgerButton: UIButton!
     @IBOutlet weak var channelNameLbl: UILabel!
+    @IBOutlet weak var messageInput: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.bindToKeyboard()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         burgerButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -24,6 +29,24 @@ class ChatViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.onChannelSelected), name: NOTIFICATION_CHANNEL_SELECTED, object: nil)
         
         getInitialUserData()
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @IBAction func sendMessageClick(_ sender: Any) {
+        if AuthService.instance.isUserLoggedIn {
+            guard let messageBody = messageInput.text, messageInput.text != "" else { return }
+            guard let channelId = MessagesService.instance.selectedChannel?.id else { return }
+            
+            SocketService.instance.sendMessage(messageBody: messageBody, userId: UserDataService.instance.id, channelId: channelId) { (success) in
+                if success {
+                    self.messageInput.text = ""
+                    self.messageInput.resignFirstResponder()  
+                }
+            }
+        }
     }
     
     func getInitialUserData() {
@@ -53,14 +76,30 @@ class ChatViewController: UIViewController {
     func updateWithChannel() {
         let channelName = MessagesService.instance.selectedChannel!.channelTitle ?? "Chat"
         channelNameLbl.text = "#\(channelName)"
+        getRequestMessages()
     }
     
     func getMessagesAfterLogin() {
         MessagesService.instance.findAllChannels { (success) in
             if success {
-                //change
+                if MessagesService.instance.channels.count > 0 {
+                    MessagesService.instance.selectedChannel = MessagesService.instance.channels[0]
+                    self.updateWithChannel()
+                } else {
+                    self.channelNameLbl.text = "No channel selected!"
+                }
             }
         }
+    }
+    
+    func getRequestMessages() {
+        guard let channelId = MessagesService.instance.selectedChannel?.id else { return }
+        
+        MessagesService.instance.getAllMessagesForChannel(channelId: channelId, completion: { (success) in
+            if success {
+                
+            }
+        })
     }
     
     

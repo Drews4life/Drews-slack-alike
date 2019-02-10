@@ -28,10 +28,12 @@ let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_CREATE_USER = "\(BASE_URL)user/add"
 let URL_GET_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 let URL_GET_CHANNELS = "\(BASE_URL)channel"
+let URL_GET_MESSAGES = "\(BASE_URL)message/byChannel"
 
 //SOCKET EVENTS
 let NEW_CHANNEL = "newChannel"
 let CHANNEL_CREATED = "channelCreated"
+let NEW_MESSAGE = "newMessage"
 
 //HEADERS
 let HEADERS = [
