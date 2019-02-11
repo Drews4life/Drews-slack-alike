@@ -21,6 +21,7 @@
 		66067413220CB3B000D21B06 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66067412220CB3B000D21B06 /* UserDataService.swift */; };
 		66067415220CCECB00D21B06 /* AvatarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66067414220CCECB00D21B06 /* AvatarPickerViewController.swift */; };
 		66067417220CD11100D21B06 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66067416220CD11100D21B06 /* AvatarCell.swift */; };
+		6606BD5E2211AAAD007B36AF /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606BD5D2211AAAD007B36AF /* MessageCell.swift */; };
 		6606E3F1220E0DA000093D94 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606E3F0220E0DA000093D94 /* CircleImage.swift */; };
 		669B39FB220AEEC2002F419A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B39FA220AEEC2002F419A /* AppDelegate.swift */; };
 		669B3A00220AEEC2002F419A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669B39FE220AEEC2002F419A /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		66067412220CB3B000D21B06 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		66067414220CCECB00D21B06 /* AvatarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerViewController.swift; sourceTree = "<group>"; };
 		66067416220CD11100D21B06 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		6606BD5D2211AAAD007B36AF /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		6606E3F0220E0DA000093D94 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		669B39F7220AEEC2002F419A /* SlackAliker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackAliker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669B39FA220AEEC2002F419A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				6606E3F0220E0DA000093D94 /* CircleImage.swift */,
 				66064E03221062ED00002324 /* ChannelCell.swift */,
 				66064E0D2210B63500002324 /* KeyboardBoundView.swift */,
+				6606BD5D2211AAAD007B36AF /* MessageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				66064E04221062ED00002324 /* ChannelCell.swift in Sources */,
 				66067411220C83BD00D21B06 /* RoundedButton.swift in Sources */,
 				669B39FB220AEEC2002F419A /* AppDelegate.swift in Sources */,
+				6606BD5E2211AAAD007B36AF /* MessageCell.swift in Sources */,
 				6606E3F1220E0DA000093D94 /* CircleImage.swift in Sources */,
 				66064E0C2210A2B900002324 /* Message.swift in Sources */,
 				66064E022210594B00002324 /* Channel.swift in Sources */,

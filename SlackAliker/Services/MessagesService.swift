@@ -15,6 +15,7 @@ class MessagesService {
     
     var channels = [Channel]()
     var messages = [Message]()
+    var unreadChannels = [String]()
     var selectedChannel: Channel?
     
     func findAllChannels(completion: @escaping CompletionHandler) {
@@ -53,9 +54,9 @@ class MessagesService {
             if response.result.error == nil {
                 guard let data = response.data else { return }
                 self.clearMessages()
-                debugPrint("-----SUCCEDED TO FETCH MESSAGES----")
+                
                 if let json = JSON(data: data).array {
-                    debugPrint("JSON MESSAGES DATA------: ", json)
+                    
                     for item in json {
                         let id = item["_id"].stringValue
                         let messageBody = item["messageBody"].stringValue
@@ -68,7 +69,7 @@ class MessagesService {
                         
                         //deleted --> userId: userId, from args
                         let message = Message(message: messageBody, username: username, channelId: channelId, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: id, timeStamp: timeStamp)
-                        debugPrint("-----SUCCEDED TO STORE MESSAGES----")
+                        
                         self.messages.append(message)
                     }
                     completion(true)

@@ -34,6 +34,10 @@ let URL_GET_MESSAGES = "\(BASE_URL)message/byChannel"
 let NEW_CHANNEL = "newChannel"
 let CHANNEL_CREATED = "channelCreated"
 let NEW_MESSAGE = "newMessage"
+let NEW_MESSAGE_CREATED = "messageCreated"
+let USER_TYPING_UPDATE = "userTypingUpdate"
+let START_TYPE = "startType"
+let STOP_TYPE = "stopType"
 
 //HEADERS
 let HEADERS = [
