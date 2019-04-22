@@ -10,14 +10,14 @@ import UIKit
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var burgerButton: UIButton!
-    @IBOutlet weak var channelNameLbl: UILabel!
-    @IBOutlet weak var messageInput: UITextField!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var sendMessageBtn: UIButton!
-    @IBOutlet weak var userIsTypingLbl: UILabel!
+    @IBOutlet fileprivate weak var burgerButton: UIButton!
+    @IBOutlet fileprivate weak var channelNameLbl: UILabel!
+    @IBOutlet fileprivate weak var messageInput: UITextField!
+    @IBOutlet fileprivate weak var tableView: UITableView!
+    @IBOutlet fileprivate weak var sendMessageBtn: UIButton!
+    @IBOutlet fileprivate weak var userIsTypingLbl: UILabel!
     
-    var isTyping = false;
+    fileprivate var isTyping = false;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +27,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         burgerButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         
         setupTableView()
-        setupGestureRecognizers()
         setupObservers()
+        setupGestureRecognizers()
         setupInitialSocketsConnections()
         getInitialUserData()
     }
     
-    @objc func dismissKeyboard() {
+    @objc fileprivate func dismissKeyboard() {
         view.endEditing(true)
     }
     
@@ -52,14 +52,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func setupTableView() {
+    fileprivate func setupTableView() {
         tableView.delegate = self;
         tableView.dataSource = self;
         tableView.estimatedRowHeight = 80;
         tableView.rowHeight = UITableView.automaticDimension;
     }
     
-    func setupGestureRecognizers() {
+    fileprivate func setupGestureRecognizers() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -67,7 +67,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
     }
     
-    func setupObservers() {
+    fileprivate func setupObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.userDataDidChange), name: NOTIFICATION_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.onChannelSelected), name: NOTIFICATION_CHANNEL_SELECTED, object: nil)
     }
@@ -123,7 +123,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func getInitialUserData() {
+    fileprivate func getInitialUserData() {
         if AuthService.instance.isUserLoggedIn {
             AuthService.instance.getUserDataByEmail { (success) in
                 if success {
@@ -135,7 +135,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    @objc func userDataDidChange() {
+    @objc fileprivate func userDataDidChange() {
         if AuthService.instance.isUserLoggedIn {
             getMessagesAfterLogin()
         } else {
@@ -144,7 +144,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    @objc func onChannelSelected() {
+    @objc fileprivate func onChannelSelected() {
         updateWithChannel()
     }
     @IBAction func messageEditingChange(_ sender: Any) {
@@ -163,13 +163,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func updateWithChannel() {
+    fileprivate func updateWithChannel() {
         let channelName = MessagesService.instance.selectedChannel!.channelTitle ?? "Chat"
         channelNameLbl.text = "#\(channelName)"
         getRequestMessages()
     }
     
-    func getMessagesAfterLogin() {
+    fileprivate func getMessagesAfterLogin() {
         MessagesService.instance.findAllChannels { (success) in
             if success {
                 if MessagesService.instance.channels.count > 0 {
@@ -182,7 +182,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func getRequestMessages() {
+    fileprivate func getRequestMessages() {
         guard let channelId = MessagesService.instance.selectedChannel?.id else { return }
         
         MessagesService.instance.getAllMessagesForChannel(channelId: channelId, completion: { (success) in

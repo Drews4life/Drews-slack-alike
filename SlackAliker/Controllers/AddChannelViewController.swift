@@ -10,9 +10,9 @@ import UIKit
 
 class AddChannelViewController: UIViewController {
 
-    @IBOutlet weak var bgView: UIView!
-    @IBOutlet weak var channelNameInput: UITextField!
-    @IBOutlet weak var channelDescriptionInput: UITextField!
+    @IBOutlet fileprivate weak var bgView: UIView!
+    @IBOutlet fileprivate weak var channelNameInput: UITextField!
+    @IBOutlet fileprivate weak var channelDescriptionInput: UITextField!
     
     
     override func viewDidLoad() {
@@ -21,11 +21,11 @@ class AddChannelViewController: UIViewController {
         setupView()
     }
 
-    @IBAction func closeModalClick(_ sender: Any) {
+    @IBAction fileprivate func closeModalClick(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func createChannelClick(_ sender: Any) {
+    @IBAction fileprivate func createChannelClick(_ sender: Any) {
         guard let channelName = channelNameInput.text, channelNameInput.text != "" else { return }
         guard let channelDescription = channelDescriptionInput.text else { return }
         
@@ -36,7 +36,7 @@ class AddChannelViewController: UIViewController {
         }
     }
     
-    func setupView() {
+    fileprivate func setupView() {
         channelNameInput.attributedPlaceholder = NSAttributedString(string: "Channel Name", attributes: [NSAttributedString.Key.foregroundColor: purplePlaceholder])
         channelDescriptionInput.attributedPlaceholder = NSAttributedString(string: "Channel Description", attributes: [NSAttributedString.Key.foregroundColor: purplePlaceholder])
         
@@ -44,7 +44,7 @@ class AddChannelViewController: UIViewController {
         bgView.addGestureRecognizer(tap)
     }
     
-    @objc func closeTap() {
+    @objc fileprivate func closeTap() {
         dismiss(animated: true, completion: nil)
     }
 }

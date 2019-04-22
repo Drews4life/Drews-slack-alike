@@ -10,8 +10,8 @@ import UIKit
 
 class AvatarPickerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
+    @IBOutlet fileprivate weak var segmentControl: UISegmentedControl!
     
     var avatarType = AvatarType.dark;
     
@@ -22,12 +22,12 @@ class AvatarPickerViewController: UIViewController, UICollectionViewDelegate, UI
         collectionView.delegate = self;
     }
 
-    @IBAction func backBtnClick(_ sender: Any) {
+    @IBAction fileprivate func backBtnClick(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     
-    @IBAction func segmentChangeClick(_ sender: Any) {
+    @IBAction fileprivate func segmentChangeClick(_ sender: Any) {
         switch segmentControl.selectedSegmentIndex {
             case 1:
                 avatarType = AvatarType.light;

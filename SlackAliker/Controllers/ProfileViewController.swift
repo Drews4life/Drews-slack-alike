@@ -10,10 +10,10 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var profileImg: UIImageView!
-    @IBOutlet weak var usernameLbl: UILabel!
-    @IBOutlet weak var userEmailLbl: UILabel!
-    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet fileprivate weak var profileImg: UIImageView!
+    @IBOutlet fileprivate weak var usernameLbl: UILabel!
+    @IBOutlet fileprivate weak var userEmailLbl: UILabel!
+    @IBOutlet fileprivate weak var backgroundView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func setupView() {
+    fileprivate func setupView() {
         profileImg.image = UIImage(named: UserDataService.instance.avatarName)
         profileImg.backgroundColor = UserDataService.instance.getUIColor(fromString: nil)
         usernameLbl.text = UserDataService.instance.name;
@@ -34,17 +34,17 @@ class ProfileViewController: UIViewController {
         
     }
 
-    @IBAction func closeModalClick(_ sender: Any) {
+    @IBAction fileprivate func closeModalClick(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func logoutClick(_ sender: Any) {
+    @IBAction fileprivate func logoutClick(_ sender: Any) {
         UserDataService.instance.logoutUser()
         NotificationCenter.default.post(name: NOTIFICATION_USER_DATA_DID_CHANGE, object: nil)
         dismiss(animated: true, completion: nil)
     }
     
-    @objc func closeTap() {
+    @objc fileprivate func closeTap() {
         dismiss(animated: true, completion: nil)
     }
 }

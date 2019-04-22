@@ -10,9 +10,9 @@ import UIKit
 
 class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var loginBtn: UIButton!
-    @IBOutlet weak var userImg: UIImageView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet fileprivate weak var loginBtn: UIButton!
+    @IBOutlet fileprivate weak var userImg: UIImageView!
+    @IBOutlet fileprivate weak var tableView: UITableView!
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
     
@@ -34,7 +34,7 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
         checkForUserData()
     }
     
-    func setupSocketListeners() {
+    fileprivate func setupSocketListeners() {
         SocketService.instance.getChannel { (success) in
             if success {
                 self.tableView.reloadData()
@@ -49,7 +49,7 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    @IBAction func addChannelClick(_ sender: Any) {
+    @IBAction fileprivate func addChannelClick(_ sender: Any) {
         if AuthService.instance.isUserLoggedIn {
             let addChannel = AddChannelViewController()
             
@@ -58,7 +58,7 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    @IBAction func loginBtnClick(_ sender: Any) {
+    @IBAction fileprivate func loginBtnClick(_ sender: Any) {
         if AuthService.instance.isUserLoggedIn {
             let profile = ProfileViewController()
             
@@ -69,11 +69,11 @@ class ChannelViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    @objc func userDataDidChange(_ notification: Notification) {
+    @objc fileprivate func userDataDidChange(_ notification: Notification) {
         checkForUserData()
     }
     
-    func checkForUserData() {
+    fileprivate func checkForUserData() {
         if AuthService.instance.isUserLoggedIn {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarName)

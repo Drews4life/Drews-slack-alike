@@ -10,9 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var emailInput: UITextField!
-    @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet fileprivate weak var emailInput: UITextField!
+    @IBOutlet fileprivate weak var passwordInput: UITextField!
+    @IBOutlet fileprivate weak var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
         setupView()
     }
     
-    @IBAction func onLoginClick(_ sender: Any) {
+    @IBAction fileprivate func onLoginClick(_ sender: Any) {
         guard let email = emailInput.text, emailInput.text != "" else { return }
         guard let password = passwordInput.text, passwordInput.text != "" else { return }
         
@@ -48,15 +48,15 @@ class LoginViewController: UIViewController {
             }
         })
     }
-    @IBAction func dismissClick(_ sender: Any) {
+    @IBAction fileprivate func dismissClick(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onCreateAccountClick(_ sender: Any) {
+    @IBAction fileprivate func onCreateAccountClick(_ sender: Any) {
         performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: self)
     }
    
-    func setupView() {
+    fileprivate func setupView() {
         loadingIndicator.isHidden = true;
         
         emailInput.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor: purplePlaceholder])

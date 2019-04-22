@@ -11,15 +11,15 @@ import UIKit
 class CreateAccountViewController: UIViewController {
     
     
-    @IBOutlet weak var usernameInput: UITextField!
-    @IBOutlet weak var emailInput: UITextField!
-    @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var userImg: UIImageView!
-    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
+    @IBOutlet fileprivate weak var usernameInput: UITextField!
+    @IBOutlet fileprivate weak var emailInput: UITextField!
+    @IBOutlet fileprivate weak var passwordInput: UITextField!
+    @IBOutlet fileprivate weak var userImg: UIImageView!
+    @IBOutlet fileprivate weak var activitySpinner: UIActivityIndicatorView!
     
-    var avatarName = "profileDefault"
-    var avatarColor = "[0.5, 0.5, 0.5, 1]";
-    var bgColor: UIColor?
+    fileprivate var avatarName = "profileDefault"
+    fileprivate var avatarColor = "[0.5, 0.5, 0.5, 1]";
+    fileprivate var bgColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class CreateAccountViewController: UIViewController {
     }
     
     
-    @IBAction func createAccountClick(_ sender: Any) {
+    @IBAction fileprivate func createAccountClick(_ sender: Any) {
         guard let name = usernameInput.text, usernameInput.text != "" else { return }
         guard let email = emailInput.text, emailInput.text != "" else { return }
         guard let password = passwordInput.text, passwordInput.text != "" else { return }
@@ -87,11 +87,11 @@ class CreateAccountViewController: UIViewController {
     
     
     
-    @IBAction func chooseAvatarClick(_ sender: Any) {
+    @IBAction fileprivate func chooseAvatarClick(_ sender: Any) {
         performSegue(withIdentifier: TO_PICK_AVATAR, sender: self)
     }
     
-    @IBAction func generateRandomBackgroundClick(_ sender: Any) {
+    @IBAction fileprivate func generateRandomBackgroundClick(_ sender: Any) {
         let r = CGFloat(arc4random_uniform(255)) / 255
         let g = CGFloat(arc4random_uniform(255)) / 255
         let b = CGFloat(arc4random_uniform(255)) / 255
@@ -104,11 +104,11 @@ class CreateAccountViewController: UIViewController {
     }
     
     
-    @IBAction func dismissAllClick(_ sender: Any) {
+    @IBAction fileprivate func dismissAllClick(_ sender: Any) {
         performSegue(withIdentifier: UNWIND, sender: self)
     }
     
-    func setupView() {
+    fileprivate func setupView() {
         activitySpinner.isHidden = true;
         
         usernameInput.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor: purplePlaceholder])
@@ -119,7 +119,7 @@ class CreateAccountViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    @objc func dismissKeyboard() {
+    @objc fileprivate func dismissKeyboard() {
         view.endEditing(true)
     }
     
